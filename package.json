@@ -1,5 +1,5 @@
 {
-  "name": "@fracto/validated-input",
+  "name": "fracto-validated-input",
   "version": "0.0.1",
   "description": "Fracto - Angular Validated Input Component",
   "repository": "https://github.com/fracto-team/fracto-validated-input.git",
