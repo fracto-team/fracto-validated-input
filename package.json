@@ -1,6 +1,6 @@
 {
-  "name": "fracto-validated-input",
-  "version": "0.0.1",
+  "name": "@fracto/ng-validated-input",
+  "version": "0.0.2",
   "description": "Fracto - Angular Validated Input Component",
   "repository": "https://github.com/fracto-team/fracto-validated-input.git",
   "author": "Orkun ÇAKILKAYA <orkuncakilkaya@gmail.com>",
