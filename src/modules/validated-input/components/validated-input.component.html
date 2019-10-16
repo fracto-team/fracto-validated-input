@@ -1,0 +1,26 @@
+<div
+  (mouseenter)="tooltip(true)"
+  (mouseleave)="tooltip(false)"
+  *ngIf="mFormControl && inputRef"
+  class="position-relative py-2 hover-label-container">
+  <ng-content select="validated-input"></ng-content>
+  <div *ngIf="labelRef" class="position-absolute mx-2 my-0 px-1 py-0 bg-white hover-label"
+       [class.label-out]="mFormControl.value && (mFormControl.value.length > 0 || getType(mFormControl.value) === 'boolean' || getType(mFormControl.value) === 'number')">
+    <ng-content select="validated-label"></ng-content>
+  </div>
+  <div *ngIf="tooltipActive && errors.length > 0 && !mFormControl.valid" class="input-tooltip d-lg-block">
+    <!--suppress AngularInvalidExpressionResultType -->
+    <span *ngFor="let error of errors; trackBy: trackBy">
+      {{getErrorMessage(error)}}
+    </span>
+  </div>
+  <div *ngIf="errors.length > 0 && !mFormControl.valid" class="d-lg-none d-block">
+    <!--suppress AngularInvalidExpressionResultType -->
+    <div class="alert alert-danger mt-2" *ngFor="let error of errors; trackBy: trackBy">
+      {{getErrorMessage(error)}}
+    </div>
+  </div>
+</div>
+<div class="mt-2" *ngIf="helperRef && inputRef">
+  <ng-content select="validated-helper"></ng-content>
+</div>
