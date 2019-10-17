@@ -1,28 +1,30 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": ".",
-    "declaration": true,
-    "stripInternal": true,
-    "experimentalDecorators": true,
-    "strictNullChecks": true,
-    "noImplicitAny": false,
+    "baseUrl": "./",
+    "importHelpers": true,
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
     "module": "es2015",
     "moduleResolution": "node",
-    "rootDir": ".",
-    "outDir": "dist",
-    "sourceMap": true,
-    "inlineSources": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "target": "es5",
-    "skipLibCheck": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
     "lib": [
-      "es2015",
+      "es2017",
       "dom"
-    ]
-  },
-  "files": [
-    "src/index.ts"
-  ],
-  "angularCompilerOptions": {
-    "strictMetadataEmit": true
+    ],
+    "paths": {
+      "ng-validated-input": [
+        "dist/ng-auto-complete"
+      ],
+      "ng-validated-input/*": [
+        "dist/ng-validated-input/*"
+      ]
+    }
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@fracto/ng-validated-input",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "Fracto - Angular Validated Input Component",
   "repository": "https://github.com/fracto-team/fracto-validated-input.git",
   "author": "Orkun ÇAKILKAYA <orkuncakilkaya@gmail.com>",
@@ -13,20 +13,16 @@
     "input"
   ],
   "devDependencies": {
+    "@angular-devkit/build-ng-packagr": "^0.803.10",
     "@angular/cli": "^8.3.9",
     "@angular/compiler": "^8.2.11",
     "@angular/compiler-cli": "^8.2.11",
+    "ng-packagr": "^5.7.0",
     "rollup": "^1.24.0",
     "tsc": "^1.20150623.0",
+    "tsickle": "^0.37.0",
     "typescript": "3.5.3",
     "uglify-js": "^3.6.2"
-  },
-  "scripts": {
-    "copy": "cp publish.json dist/package.json",
-    "transpile": "ngc",
-    "package": "rollup -c",
-    "minify": "uglifyjs dist/bundles/fracto-validated-input.js --screw-ie8 --compress --mangle --comments --output dist/bundles/fracto-validated-input.min.js",
-    "build": "npm run transpile && npm run package && npm run minify && npm run copy"
   },
   "dependencies": {
     "@angular/common": "^8.2.11",
@@ -34,5 +30,12 @@
     "@angular/forms": "^8.2.11",
     "@angular/platform-browser": "^8.2.11",
     "rxjs": "^6.5.3"
+  },
+  "scripts": {
+    "ng": "ng",
+    "build": "ng build",
+    "build_lib": "ng build ng-validated-input",
+    "npm_pack": "cd dist/ng-validated-input && npm pack",
+    "package": "npm run build_lib && npm run npm_pack"
   }
 }

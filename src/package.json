@@ -1,6 +1,6 @@
 {
   "name": "@fracto/ng-validated-input",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Fracto - Angular Validated Input Component",
   "repository": "https://github.com/fracto-team/fracto-validated-input.git",
   "author": "Orkun ÇAKILKAYA <orkuncakilkaya@gmail.com>",
@@ -12,10 +12,9 @@
     "validator",
     "input"
   ],
-  "main": "bundles/fracto-validated-input.min.js",
   "module": "src/index.js",
   "typings": "src/index.d.ts",
-  "dependencies": {
+  "peerDependencies": {
     "@angular/common": "^8.2.11",
     "@angular/core": "^8.2.11",
     "@angular/forms": "^8.2.11",
